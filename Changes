@@ -2,4 +2,6 @@ Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
 
+0.001     2016-01-01 20:10:30+09:00 Asia/Seoul
+
    - first release
