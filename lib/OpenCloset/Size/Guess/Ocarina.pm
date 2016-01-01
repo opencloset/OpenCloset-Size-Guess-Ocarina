@@ -1,5 +1,9 @@
+package OpenCloset::Size::Guess::Ocarina;
+# ABSTRACT: OpenCloset::Size::Guess driver for the Ocarina
+
 use strict;
 use warnings;
-package OpenCloset::Size::Guess::Ocarina;
+
+our $VERSION = '0.001';
 
 1;
