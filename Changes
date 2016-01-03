@@ -2,6 +2,8 @@ Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
 
+   - Implement OpenCloset::Size::Guess::Ocarina driver
+
 0.001     2016-01-01 20:10:30+09:00 Asia/Seoul
 
    - first release
