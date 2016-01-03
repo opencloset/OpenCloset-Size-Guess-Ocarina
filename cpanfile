@@ -1,14 +1,24 @@
 requires "HTTP::Tiny" => "0.056";
+requires "IO::Socket::SSL" => "0";
+requires "JSON" => "0";
+requires "List::MoreUtils" => "0";
+requires "Moo" => "0";
+requires "Mozilla::CA" => "0";
+requires "Net::SSLeay" => "0";
 requires "OpenCloset::Size::Guess" => "0.003";
-requires "perl" => "5.006";
-requires "strict" => "0";
-requires "warnings" => "0";
+requires "OpenCloset::Size::Guess::Role::Base" => "0";
+requires "Try::Tiny" => "0";
+requires "Types::Standard" => "0";
+requires "perl" => "5.008";
+requires "utf8" => "0";
 
 on 'test' => sub {
   requires "ExtUtils::MakeMaker" => "0";
   requires "File::Spec" => "0";
   requires "Test::More" => "0";
-  requires "perl" => "5.006";
+  requires "perl" => "5.008";
+  requires "strict" => "0";
+  requires "warnings" => "0";
 };
 
 on 'test' => sub {
@@ -17,7 +27,7 @@ on 'test' => sub {
 
 on 'configure' => sub {
   requires "ExtUtils::MakeMaker" => "6.17";
-  requires "perl" => "5.006";
+  requires "perl" => "5.008";
 };
 
 on 'develop' => sub {
@@ -40,4 +50,6 @@ on 'develop' => sub {
   requires "Test::Version" => "1";
   requires "blib" => "1.01";
   requires "perl" => "5.006";
+  requires "strict" => "0";
+  requires "warnings" => "0";
 };
