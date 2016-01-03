@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.008;
 
 use ExtUtils::MakeMaker 6.17;
 
@@ -13,18 +13,28 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "OpenCloset-Size-Guess-Ocarina",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.006",
+  "MIN_PERL_VERSION" => "5.008",
   "NAME" => "OpenCloset::Size::Guess::Ocarina",
   "PREREQ_PM" => {
     "HTTP::Tiny" => "0.056",
+    "IO::Socket::SSL" => 0,
+    "JSON" => 0,
+    "List::MoreUtils" => 0,
+    "Moo" => 0,
+    "Mozilla::CA" => 0,
+    "Net::SSLeay" => 0,
     "OpenCloset::Size::Guess" => "0.003",
-    "strict" => 0,
-    "warnings" => 0
+    "OpenCloset::Size::Guess::Role::Base" => 0,
+    "Try::Tiny" => 0,
+    "Types::Standard" => 0,
+    "utf8" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
-    "Test::More" => 0
+    "Test::More" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
   "VERSION" => "0.002",
   "test" => {
@@ -37,9 +47,19 @@ my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "HTTP::Tiny" => "0.056",
+  "IO::Socket::SSL" => 0,
+  "JSON" => 0,
+  "List::MoreUtils" => 0,
+  "Moo" => 0,
+  "Mozilla::CA" => 0,
+  "Net::SSLeay" => 0,
   "OpenCloset::Size::Guess" => "0.003",
+  "OpenCloset::Size::Guess::Role::Base" => 0,
   "Test::More" => 0,
+  "Try::Tiny" => 0,
+  "Types::Standard" => 0,
   "strict" => 0,
+  "utf8" => 0,
   "warnings" => 0
 );
 
