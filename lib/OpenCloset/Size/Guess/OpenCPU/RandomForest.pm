@@ -28,7 +28,8 @@ has url         => ( is => 'ro', isa => Str, default => 'https://opencpu.theopen
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
-has thigh       => ( is => 'ro', isa => Int );
+has thigh       => ( is => 'ro', isa => Int, default => 0 );
+has hip         => ( is => 'ro', isa => Int, default => 0 );
 has arm         => ( is => 'ro', isa => Int );
 has leg         => ( is => 'ro', isa => Int );
 #>>>
@@ -62,6 +63,7 @@ sub guess {
         waist    => $self->waist,
         topbelly => $self->topbelly,
         thigh    => $self->thigh,
+        hip      => $self->hip,
         arm      => $self->arm,
         leg      => $self->leg,
     );
