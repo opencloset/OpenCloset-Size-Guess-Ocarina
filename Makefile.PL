@@ -6,15 +6,15 @@ use 5.008;
 use ExtUtils::MakeMaker 6.17;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "OpenCloset::Size::Guess driver for the Ocarina",
+  "ABSTRACT" => "OpenCloset::Size::OpenCPU::RandomForest driver for the Ocarina",
   "AUTHOR" => "Yongbin Yu - \x{c720}\x{c6a9}\x{be48} <yongbin.yu\@gmail.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.17"
   },
-  "DISTNAME" => "OpenCloset-Size-Guess-Ocarina",
+  "DISTNAME" => "OpenCloset-Size-Guess-OpenCPU-RandomForest",
   "LICENSE" => "perl",
   "MIN_PERL_VERSION" => "5.008",
-  "NAME" => "OpenCloset::Size::Guess::Ocarina",
+  "NAME" => "OpenCloset::Size::Guess::OpenCPU::RandomForest",
   "PREREQ_PM" => {
     "HTTP::Tiny" => "0.056",
     "IO::Socket::SSL" => 0,
