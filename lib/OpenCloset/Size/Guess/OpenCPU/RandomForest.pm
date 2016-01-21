@@ -1,5 +1,5 @@
-package OpenCloset::Size::Guess::Ocarina;
-# ABSTRACT: OpenCloset::Size::Guess driver for the Ocarina
+package OpenCloset::Size::Guess::OpenCPU::RandomForest;
+# ABSTRACT: OpenCloset::Size::OpenCPU::RandomForest driver for the Ocarina
 
 use utf8;
 
@@ -24,11 +24,12 @@ use Mozilla::CA;
 use Net::SSLeay;
 
 #<<< skip perltidy
-has url         => ( is => 'ro', isa => Str, default => 'https://brompton.silex.kr//ocpu/tmp/ocarina/R/size' );
+has url         => ( is => 'ro', isa => Str, default => 'https://opencpu.theopencloset.net/ocpu/tmp/ocarina/R/size' );
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
-has thigh       => ( is => 'ro', isa => Int );
+has thigh       => ( is => 'ro', isa => Int, default => 0 );
+has hip         => ( is => 'ro', isa => Int, default => 0 );
 has arm         => ( is => 'ro', isa => Int );
 has leg         => ( is => 'ro', isa => Int );
 #>>>
@@ -62,6 +63,7 @@ sub guess {
         waist    => $self->waist,
         topbelly => $self->topbelly,
         thigh    => $self->thigh,
+        hip      => $self->hip,
         arm      => $self->arm,
         leg      => $self->leg,
     );
@@ -84,7 +86,7 @@ sub guess {
         return \%ret;
     }
 
-    my $value_url = "https://brompton.silex.kr/ocpu/tmp/${id}/R/.val/json";
+    my $value_url = "https://opencpu.theopencloset.net/ocpu/tmp/${id}/R/.val/json";
     my $res       = $http->get($value_url);
     unless ( $res->{success} ) {
         $ret{reason} = "$res->{status}: $res->{content}";
@@ -119,7 +121,7 @@ __END__
     use OpenCloset::Size::Guess;
 
     my $guesser = OpenCloset::Size::Guess->new(
-        'Ocarina',
+        'OpenCPU::RandomForest',
         gender     => 'male',
         height     => 183,
         weight     => 82,

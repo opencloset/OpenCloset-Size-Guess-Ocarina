@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+   - Change driver name from Ocarina -> OpenCPU::RandomForest
+   - Apply changed API server URL (https://opencpu.theopencloset.net)
+   - Add 'hip' attribute to support female query
 
 0.002     2016-01-03 15:21:20+09:00 Asia/Seoul
 
