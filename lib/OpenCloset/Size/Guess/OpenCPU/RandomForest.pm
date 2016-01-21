@@ -1,5 +1,5 @@
-package OpenCloset::Size::Guess::Ocarina;
-# ABSTRACT: OpenCloset::Size::Guess driver for the Ocarina
+package OpenCloset::Size::Guess::OpenCPU::RandomForest;
+# ABSTRACT: OpenCloset::Size::OpenCPU::RandomForest driver for the Ocarina
 
 use utf8;
 
@@ -119,7 +119,7 @@ __END__
     use OpenCloset::Size::Guess;
 
     my $guesser = OpenCloset::Size::Guess->new(
-        'Ocarina',
+        'OpenCPU::RandomForest',
         gender     => 'male',
         height     => 183,
         weight     => 82,
