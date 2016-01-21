@@ -24,7 +24,7 @@ use Mozilla::CA;
 use Net::SSLeay;
 
 #<<< skip perltidy
-has url         => ( is => 'ro', isa => Str, default => 'https://brompton.silex.kr//ocpu/tmp/ocarina/R/size' );
+has url         => ( is => 'ro', isa => Str, default => 'https://opencpu.theopencloset.net/ocpu/tmp/ocarina/R/size' );
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
@@ -84,7 +84,7 @@ sub guess {
         return \%ret;
     }
 
-    my $value_url = "https://brompton.silex.kr/ocpu/tmp/${id}/R/.val/json";
+    my $value_url = "https://opencpu.theopencloset.net/ocpu/tmp/${id}/R/.val/json";
     my $res       = $http->get($value_url);
     unless ( $res->{success} ) {
         $ret{reason} = "$res->{status}: $res->{content}";
