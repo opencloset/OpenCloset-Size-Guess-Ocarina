@@ -1,6 +1,7 @@
 requires "HTTP::Tiny" => "0.056";
 requires "IO::Socket::SSL" => "0";
 requires "JSON" => "0";
+requires "JSON::PP" => "2.27300";
 requires "List::MoreUtils" => "0";
 requires "Moo" => "0";
 requires "Mozilla::CA" => "0";
