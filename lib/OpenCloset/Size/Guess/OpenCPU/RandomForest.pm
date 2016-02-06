@@ -163,6 +163,8 @@ This module is a L<OpenCloset::Size::Guess> driver for the Ocarina(OpenCPU based
 
 =attr thigh
 
+=attr hip
+
 =attr arm
 
 =attr leg
