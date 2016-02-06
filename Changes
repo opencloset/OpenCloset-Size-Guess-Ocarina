@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+   - Add 'hip' section for pass pod checker
+   - Up to date Dist::Zilla
 
 0.003     2016-01-21 19:01:24+09:00 Asia/Seoul
    - Change driver name from Ocarina -> OpenCPU::RandomForest
