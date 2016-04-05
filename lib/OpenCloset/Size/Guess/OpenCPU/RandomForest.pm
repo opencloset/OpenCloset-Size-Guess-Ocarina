@@ -24,7 +24,7 @@ use Mozilla::CA;
 use Net::SSLeay;
 
 #<<< skip perltidy
-has url         => ( is => 'ro', isa => Str, default => 'https://opencpu.theopencloset.net/ocpu/tmp/ocarina/R/size' );
+has url         => ( is => 'ro', isa => Str, default => 'https://opencpu.theopencloset.net/ocpu/tmp/ocarina/R/size/json' );
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
@@ -75,27 +75,9 @@ sub guess {
         return \%ret;
     }
 
-    my @ids;
-    for my $line ( split( /\n/, $guess->{content} ) ) {
-        my ($id) = $line =~ m{^/ocpu/tmp/(x[0-9a-f]{10})/.*$};
-        push @ids, $id;
-    }
-    my $id = shift @ids;
-    unless ( all { $_ eq $id } @ids ) {
-        $ret{reason} = "invalid server response : $guess->{congent}";
-        return \%ret;
-    }
-
-    my $value_url = "https://opencpu.theopencloset.net/ocpu/tmp/${id}/R/.val/json";
-    my $res       = $http->get($value_url);
-    unless ( $res->{success} ) {
-        $ret{reason} = "$res->{status}: $res->{content}";
-        return \%ret;
-    }
-
-    my $data = try { JSON::decode_json( $res->{content} ) };
+    my $data = try { JSON::decode_json( $guess->{content} ) };
     unless ($data) {
-        $ret{reason} = "failed to decode json string: $res->{content}";
+        $ret{reason} = "failed to decode json string: $guess->{content}";
         return \%ret;
     }
 
