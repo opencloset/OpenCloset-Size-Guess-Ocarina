@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+   - Reduce OpenCPU request(#2)
+   - Return proper success attribute(#3)
 
 0.004     2016-02-10 12:32:09+09:00 Asia/Seoul
    - Add 'hip' section for pass pod checker
