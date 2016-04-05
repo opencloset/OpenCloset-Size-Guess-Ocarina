@@ -88,7 +88,7 @@ sub guess {
         %ret = ( %ret, mesh @keys, @values );
     }
 
-    return \%ret;
+    return { %ret, success => 1 };
 }
 
 1;
