@@ -1,7 +1,6 @@
 requires "HTTP::Tiny" => "0.056";
 requires "IO::Socket::SSL" => "0";
 requires "JSON" => "0";
-requires "JSON::PP" => "2.27300";
 requires "List::MoreUtils" => "0";
 requires "Moo" => "0";
 requires "Mozilla::CA" => "0";
@@ -29,6 +28,10 @@ on 'test' => sub {
 on 'configure' => sub {
   requires "ExtUtils::MakeMaker" => "6.17";
   requires "perl" => "5.008";
+};
+
+on 'configure' => sub {
+  suggests "JSON::PP" => "2.27300";
 };
 
 on 'develop' => sub {
