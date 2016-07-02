@@ -23,8 +23,10 @@ use IO::Socket::SSL;
 use Mozilla::CA;
 use Net::SSLeay;
 
+my $ocarina_url = $ENV{OPENCLOSET_OCARINA_URL} // 'https://opencpu.theopencloset.net/ocpu/tmp/ocarina/R/size/json';
+
 #<<< skip perltidy
-has url         => ( is => 'ro', isa => Str, default => 'https://opencpu.theopencloset.net/ocpu/tmp/ocarina/R/size/json' );
+has url         => ( is => 'ro', isa => Str, default => $ocarina_url );
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
