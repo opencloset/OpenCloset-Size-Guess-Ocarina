@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+0.006     2016-07-03 01:23:24+09:00 Asia/Seoul
    - Use more exact argument name : g -> gender(#4)
    - Passing 'result' argument due to changed ocarina API(#4)
    - Support external ocarina url for easier tests(#5)
