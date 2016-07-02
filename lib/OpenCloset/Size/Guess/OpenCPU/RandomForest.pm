@@ -56,7 +56,7 @@ sub guess {
     );
 
     my %params = (
-        g        => sprintf( q{'%s'}, $self->gender ),
+        gender   => sprintf( q{'%s'}, $self->gender ),
         height   => $self->height,
         weight   => $self->weight,
         bust     => $self->bust,
