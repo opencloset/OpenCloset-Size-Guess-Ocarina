@@ -9,14 +9,14 @@ requires "OpenCloset::Size::Guess" => "0.003";
 requires "OpenCloset::Size::Guess::Role::Base" => "0";
 requires "Try::Tiny" => "0";
 requires "Types::Standard" => "0";
-requires "perl" => "5.008";
+requires "perl" => "5.010";
 requires "utf8" => "0";
 
 on 'test' => sub {
   requires "ExtUtils::MakeMaker" => "0";
   requires "File::Spec" => "0";
   requires "Test::More" => "0";
-  requires "perl" => "5.008";
+  requires "perl" => "5.010";
   requires "strict" => "0";
   requires "warnings" => "0";
 };
@@ -27,7 +27,7 @@ on 'test' => sub {
 
 on 'configure' => sub {
   requires "ExtUtils::MakeMaker" => "6.17";
-  requires "perl" => "5.008";
+  requires "perl" => "5.010";
 };
 
 on 'configure' => sub {
@@ -50,6 +50,7 @@ on 'develop' => sub {
   requires "Test::More" => "0";
   requires "Test::Pod" => "1.41";
   requires "Test::Pod::Coverage" => "1.08";
+  requires "Test::Portability::Files" => "0";
   requires "Test::Spelling" => "0.12";
   requires "Test::Version" => "1";
   requires "blib" => "1.01";

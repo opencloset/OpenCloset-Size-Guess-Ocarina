@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use 5.008;
+use 5.010;
 
 use ExtUtils::MakeMaker 6.17;
 
@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "OpenCloset-Size-Guess-OpenCPU-RandomForest",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.008",
+  "MIN_PERL_VERSION" => "5.010",
   "NAME" => "OpenCloset::Size::Guess::OpenCPU::RandomForest",
   "PREREQ_PM" => {
     "HTTP::Tiny" => "0.056",
