@@ -57,6 +57,8 @@ sub guess {
 
     my %params = (
         gender   => sprintf( q{'%s'}, $self->gender ),
+        # 올바른 JSON 응답을 받기위해서는 list 형태로 호출해야합니다.
+        result   => q{'list'},
         height   => $self->height,
         weight   => $self->weight,
         bust     => $self->bust,
