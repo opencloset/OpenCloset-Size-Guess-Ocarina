@@ -39,24 +39,7 @@ has leg         => ( is => 'ro', isa => Int );
 sub guess {
     my $self = shift;
 
-    my %ret = (
-        height   => $self->height,
-        weight   => $self->weight,
-        gender   => $self->gender,
-        arm      => undef,
-        bust     => undef,
-        foot     => undef,
-        hip      => undef,
-        knee     => undef,
-        leg      => undef,
-        thigh    => undef,
-        topbelly => undef,
-        waist    => undef,
-        belly    => undef,
-        success  => 0,
-        reason   => q{},
-    );
-
+    my %ret;
     my %params = (
         gender   => sprintf( q{'%s'}, $self->gender ),
         # 올바른 JSON 응답을 받기위해서는 list 형태로 호출해야합니다.
