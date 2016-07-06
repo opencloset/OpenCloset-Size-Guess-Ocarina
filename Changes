@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+   - Remove meaningless elements from prediction result(#6)
 
 0.006     2016-07-03 01:23:24+09:00 Asia/Seoul
    - Use more exact argument name : g -> gender(#4)
