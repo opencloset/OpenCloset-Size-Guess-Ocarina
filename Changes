@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+   - Handle for indeterminable arguments (#7)
 
 0.007     2016-07-06 18:37:47+09:00 Asia/Seoul
    - Remove meaningless elements from prediction result(#6)

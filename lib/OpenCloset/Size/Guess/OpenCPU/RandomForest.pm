@@ -30,8 +30,8 @@ has url         => ( is => 'ro', isa => Str, default => $ocarina_url );
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
-has thigh       => ( is => 'ro', isa => Int, default => 0 );
-has hip         => ( is => 'ro', isa => Int, default => 0 );
+has thigh       => ( is => 'ro', isa => Int );
+has hip         => ( is => 'ro', isa => Int );
 has arm         => ( is => 'ro', isa => Int );
 has leg         => ( is => 'ro', isa => Int );
 #>>>
@@ -46,14 +46,12 @@ sub guess {
         result   => q{'list'},
         height   => $self->height,
         weight   => $self->weight,
-        bust     => $self->bust,
-        waist    => $self->waist,
-        topbelly => $self->topbelly,
-        thigh    => $self->thigh,
-        hip      => $self->hip,
-        arm      => $self->arm,
-        leg      => $self->leg,
     );
+
+    for my $k (qw/bust waist topbelly thigh hip arm leg/) {
+        next unless $self->$k;
+        $params{$k} = $self->$k;
+    }
 
     my $http = HTTP::Tiny->new();
     my $guess = $http->post_form( $self->url, \%params );
