@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+
+0.008     2016-07-12 00:07:49+09:00 Asia/Seoul
    - Handle for indeterminable arguments (#7)
 
 0.007     2016-07-06 18:37:47+09:00 Asia/Seoul
