@@ -30,8 +30,8 @@ has url         => ( is => 'ro', isa => Str, default => $ocarina_url );
 has bust        => ( is => 'ro', isa => Int );
 has waist       => ( is => 'ro', isa => Int );
 has topbelly    => ( is => 'ro', isa => Int );
-has thigh       => ( is => 'ro', isa => Int, default => 0 );
-has hip         => ( is => 'ro', isa => Int, default => 0 );
+has thigh       => ( is => 'ro', isa => Int );
+has hip         => ( is => 'ro', isa => Int );
 has arm         => ( is => 'ro', isa => Int );
 has leg         => ( is => 'ro', isa => Int );
 #>>>
